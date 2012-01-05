@@ -1,0 +1,1379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+>Actions</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+><SCRIPT TYPE="text/javascript"
+>window.onload = function () {setSynopsis("mini_Actions.html")};</SCRIPT
+></HEAD
+><BODY
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="topbar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
+></TD
+><TD CLASS="title"
+></TD
+><TD CLASS="topbut"
+><A HREF="index.html"
+>Contents</A
+></TD
+><TD CLASS="topbut"
+><A HREF="doc-index.html"
+>Index</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="modulebar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><FONT SIZE="6"
+>Actions</FONT
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Description</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Actions defines the functions which are called by the user.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Synopsis</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aactions"
+>actions</A
+> :: String -&gt; Maybe <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Acommands"
+>commands</A
+> :: String -&gt; Maybe <A HREF="World.html#t%3ACommand"
+>Command</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Adirections"
+>directions</A
+> :: String -&gt; Maybe <A HREF="World.html#t%3ADirection"
+>Direction</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AobjectHere"
+>objectHere</A
+> :: String -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AfindObj"
+>findObj</A
+> :: String -&gt; [<A HREF="World.html#t%3AObject"
+>Object</A
+>] -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AobjectData"
+>objectData</A
+> :: String -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AremoveObject"
+>removeObject</A
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AaddObject"
+>addObject</A
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AupdateRoom"
+>updateRoom</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AaddInv"
+>addInv</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AremoveInv"
+>removeInv</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Acarrying"
+>carrying</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AcarryingObj"
+>carryingObj</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AobjectInArray"
+>objectInArray</A
+> :: String -&gt; [<A HREF="World.html#t%3AObject"
+>Object</A
+>] -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Amove"
+>move</A
+> :: <A HREF="World.html#t%3ADirection"
+>Direction</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; Maybe String</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Ago"
+>go</A
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aget"
+>get</A
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aput"
+>put</A
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aexamine"
+>examine</A
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Apour"
+>pour</A
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Adrink"
+>drink</A
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aopen"
+>open</A
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Ainv"
+>inv</A
+> :: <A HREF="World.html#t%3ACommand"
+>Command</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aquit"
+>quit</A
+> :: <A HREF="World.html#t%3ACommand"
+>Command</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Documentation</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:actions"
+><A NAME="v%3Aactions"
+></A
+></A
+><B
+>actions</B
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+>:: String</TD
+><TD CLASS="rdoc"
+><TT
+>String</TT
+> to be parsed as an <TT
+><A HREF="World.html#t%3AAction"
+>Action</A
+></TT
+>
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+>-&gt; Maybe <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+><TD CLASS="rdoc"
+>Returns <TT
+>Just</TT
+> <TT
+><A HREF="World.html#t%3AAction"
+>Action</A
+></TT
+>-function or <TT
+>Nothing</TT
+> if not a valid <TT
+><A HREF="World.html#t%3AAction"
+>Action</A
+></TT
+>.
+</TD
+></TR
+><TR
+><TD CLASS="ndoc" COLSPAN="2"
+>The <TT
+><A HREF="Actions.html#v%3Aactions"
+>actions</A
+></TT
+> function attempts to parse an input string into a <TT
+><A HREF="World.html#t%3AAction"
+>Action</A
+></TT
+> function.
+</TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:commands"
+><A NAME="v%3Acommands"
+></A
+></A
+><B
+>commands</B
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+>:: String</TD
+><TD CLASS="rdoc"
+><TT
+>String</TT
+> to be parsed as a <TT
+><A HREF="World.html#t%3ACommand"
+>Command</A
+></TT
+>
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+>-&gt; Maybe <A HREF="World.html#t%3ACommand"
+>Command</A
+></TD
+><TD CLASS="rdoc"
+>Returns <TT
+>Just</TT
+> <TT
+><A HREF="World.html#t%3ACommand"
+>Command</A
+></TT
+>, or <TT
+>Nothing</TT
+> if not a valid <TT
+><A HREF="World.html#t%3ACommand"
+>Command</A
+></TT
+>
+</TD
+></TR
+><TR
+><TD CLASS="ndoc" COLSPAN="2"
+>The <TT
+><A HREF="Actions.html#v%3Acommands"
+>commands</A
+></TT
+> function attempts to parse an input string into a <TT
+><A HREF="World.html#t%3ACommand"
+>Command</A
+></TT
+> function.
+</TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:directions"
+><A NAME="v%3Adirections"
+></A
+></A
+><B
+>directions</B
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+>:: String</TD
+><TD CLASS="rdoc"
+><TT
+>String</TT
+> to be parsed as a <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+>
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+>-&gt; Maybe <A HREF="World.html#t%3ADirection"
+>Direction</A
+></TD
+><TD CLASS="rdoc"
+>Returns <TT
+>Just</TT
+> <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+>, or <TT
+>Nothing</TT
+> if not a valid <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+>.
+ Convert the input string into lowercase
+</TD
+></TR
+><TR
+><TD CLASS="ndoc" COLSPAN="2"
+>The <TT
+><A HREF="Actions.html#v%3Adirections"
+>directions</A
+></TT
+> function attempts to parse an input string into a <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+>.
+</TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:objectHere"
+><A NAME="v%3AobjectHere"
+></A
+></A
+><B
+>objectHere</B
+> :: String -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:findObj"
+><A NAME="v%3AfindObj"
+></A
+></A
+><B
+>findObj</B
+> :: String -&gt; [<A HREF="World.html#t%3AObject"
+>Object</A
+>] -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3AfindObj"
+>findObj</A
+></TT
+> returns the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> with a given <TT
+><A HREF="World.html#v%3Aobj_name"
+>obj_name</A
+></TT
+> and a list of objects, return the object data. 
+Requires the object to be in the list. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:objectData"
+><A NAME="v%3AobjectData"
+></A
+></A
+><B
+>objectData</B
+> :: String -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3AobjectData"
+>objectData</A
+></TT
+> finds an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> in a room description.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:removeObject"
+><A NAME="v%3AremoveObject"
+></A
+></A
+><B
+>removeObject</B
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Given an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> name and a <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> description, return a new <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> 
+	description without that object 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:addObject"
+><A NAME="v%3AaddObject"
+></A
+></A
+><B
+>addObject</B
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Given an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> and a <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> description, return a new <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> description
+   with that <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> added 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:updateRoom"
+><A NAME="v%3AupdateRoom"
+></A
+></A
+><B
+>updateRoom</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Given a game state and a <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> id, replace the old <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> information
+	with new data. If a <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> with the given id does not already exist, it is added. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:addInv"
+><A NAME="v%3AaddInv"
+></A
+></A
+><B
+>addInv</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Given a game state and an <TT
+><A HREF="World.html#v%3Aobj_name"
+>obj_name</A
+></TT
+>, finds the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> in the current
+	<TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> and adds it to the player's <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+> 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:removeInv"
+><A NAME="v%3AremoveInv"
+></A
+></A
+><B
+>removeInv</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Given a game state and an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>, remove the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> from the
+   <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+>. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:carrying"
+><A NAME="v%3Acarrying"
+></A
+></A
+><B
+>carrying</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Determines whether an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> with a given <TT
+><A HREF="World.html#v%3Aobj_name"
+>obj_name</A
+></TT
+> exists in
+	the player's <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+> 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:carryingObj"
+><A NAME="v%3AcarryingObj"
+></A
+></A
+><B
+>carryingObj</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3AObject"
+>Object</A
+> -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Determines whether a given <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> exists in the players' <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+>.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:objectInArray"
+><A NAME="v%3AobjectInArray"
+></A
+></A
+><B
+>objectInArray</B
+> :: String -&gt; [<A HREF="World.html#t%3AObject"
+>Object</A
+>] -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Determines whether an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> with a given <TT
+><A HREF="World.html#v%3Aobj_name"
+>obj_name</A
+></TT
+> can be found in an array of <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>s.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:move"
+><A NAME="v%3Amove"
+></A
+></A
+><B
+>move</B
+> :: <A HREF="World.html#t%3ADirection"
+>Direction</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+> -&gt; Maybe String</TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3Amove"
+>move</A
+></TT
+> is given a <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+> and a <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> to <TT
+><A HREF="Actions.html#v%3Amove"
+>move</A
+></TT
+> from 
+	and returns the <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> id in that <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+>, if it exists. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:go"
+><A NAME="v%3Ago"
+></A
+></A
+><B
+>go</B
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Given a string <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+> and a game state, update the game state with the new Location. 
+	If there is no <TT
+><A HREF="World.html#t%3AExit"
+>Exit</A
+></TT
+> that way, report an error. The <TT
+>String</TT
+> is a message reported to the player.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:get"
+><A NAME="v%3Aget"
+></A
+></A
+><B
+>get</B
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3Aget"
+>get</A
+></TT
+> removes an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> from the current <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>, and puts it in the player's <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+>.
+	Only works if the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> is in the current <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>. Uses <TT
+><A HREF="Actions.html#v%3AobjectHere"
+>objectHere</A
+></TT
+>
+	and <TT
+><A HREF="Actions.html#v%3AremoveObject"
+>removeObject</A
+></TT
+> to remove the object, and <TT
+><A HREF="Actions.html#v%3AupdateRoom"
+>updateRoom</A
+></TT
+> to replace the
+	'Room in the game state with the new <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> which doesn't contain the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:put"
+><A NAME="v%3Aput"
+></A
+></A
+><B
+>put</B
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3Aput"
+>put</A
+></TT
+> removes an <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> from the player's <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+>, and puts it in the current <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>.
+   Similar to <TT
+><A HREF="Actions.html#v%3Aget"
+>get</A
+></TT
+> but in reverse - find the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> in the <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+>, create
+   a new <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> with the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> in, update the game world with the new <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:examine"
+><A NAME="v%3Aexamine"
+></A
+></A
+><B
+>examine</B
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3Aexamine"
+>examine</A
+></TT
+> returns a message giving the full description of the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>
+	with the given 'obj_name. If the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+> is not in the <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> or 
+	the player's <TT
+><A HREF="World.html#v%3Ainventory"
+>inventory</A
+></TT
+>, it reports an error message. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:pour"
+><A NAME="v%3Apour"
+></A
+></A
+><B
+>pour</B
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3Apour"
+>pour</A
+></TT
+> pours coffee into a mug. However, this is only done if the player is carrying
+	both the pot and the mug, otherwise appropriate error messages are displayed.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:drink"
+><A NAME="v%3Adrink"
+></A
+></A
+><B
+>drink</B
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3Adrink"
+>drink</A
+></TT
+> makes the player drink the coffee (i.e. emptying the cup and updating
+	the caffinated flag. However, this is only done if the player has a full
+	coffee mug!
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:open"
+><A NAME="v%3Aopen"
+></A
+></A
+><B
+>open</B
+> :: <A HREF="World.html#t%3AAction"
+>Action</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="Actions.html#v%3Aopen"
+>open</A
+></TT
+> function opens the door. However, this is only allowed if the 
+	player has had coffee, otherwise it reports an error.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:inv"
+><A NAME="v%3Ainv"
+></A
+></A
+><B
+>inv</B
+> :: <A HREF="World.html#t%3ACommand"
+>Command</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Actions.html#v%3Ainv"
+>inv</A
+></TT
+> lists what the player is carrying. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:quit"
+><A NAME="v%3Aquit"
+></A
+></A
+><B
+>quit</B
+> :: <A HREF="World.html#t%3ACommand"
+>Command</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="Actions.html#v%3Aquit"
+>quit</A
+></TT
+> function quits the game, saying <A HREF="Bye bye-.html"
+>Bye bye.</A
+>
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="botbar"
+>Produced by <A HREF="http://www.haskell.org/haddock/"
+>Haddock</A
+> version 2.6.1</TD
+></TR
+></TABLE
+></BODY
+></HTML
+>

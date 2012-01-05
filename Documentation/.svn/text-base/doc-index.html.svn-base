@@ -1,0 +1,722 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+> (Index)</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+></HEAD
+><BODY
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="topbar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
+></TD
+><TD CLASS="title"
+></TD
+><TD CLASS="topbut"
+><A HREF="index.html"
+>Contents</A
+></TD
+><TD CLASS="topbut"
+><A HREF="doc-index.html"
+>Index</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD
+><TABLE ID="indexlist" CELLPADDING="0" CELLSPACING="5"
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>Action</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#t%3AAction"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>actions</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Aactions"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>addInv</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AaddInv"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>addObject</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AaddObject"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>bedroom</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Abedroom"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>buildGameData</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AbuildGameData"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>buildGameWorld</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AbuildGameWorld"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>buildRooms</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AbuildRooms"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>caffeinated</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Acaffeinated"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>carrying</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Acarrying"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>carryingObj</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AcarryingObj"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>coffeepot</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Acoffeepot"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>Command</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#t%3ACommand"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>commands</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Acommands"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>Direction</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#t%3ADirection"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>directions</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Adirections"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>drink</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Adrink"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>East</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3AEast"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>examine</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Aexamine"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry" COLSPAN="2"
+>Exit</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexannot"
+>1 (Type/Class)</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#t%3AExit"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexannot"
+>2 (Data Constructor)</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3AExit"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>exits</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aexits"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>exit_desc</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aexit_desc"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>exit_dir</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aexit_dir"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>findObj</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AfindObj"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>findRoom</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AfindRoom"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>finished</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Afinished"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>fullmug</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Afullmug"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry" COLSPAN="2"
+>GameData</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexannot"
+>1 (Type/Class)</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#t%3AGameData"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexannot"
+>2 (Data Constructor)</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3AGameData"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>gameObjects</TD
+><TD CLASS="indexlinks"
+>World</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>gameworld</TD
+><TD CLASS="indexlinks"
+>World</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>get</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Aget"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>getRoomData</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3AgetRoomData"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>go</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Ago"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>hall</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Ahall"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>hGetContents'</TD
+><TD CLASS="indexlinks"
+>Saveload</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>initState</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3AinitState"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>inv</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Ainv"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>inventory</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Ainventory"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>kitchen</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Akitchen"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>load</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3Aload"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>loadHandler</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AloadHandler"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>location_id</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Alocation_id"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>main</TD
+><TD CLASS="indexlinks"
+><A HREF="Main.html#v%3Amain"
+>Main</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>move</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Amove"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>mug</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Amug"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>North</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3ANorth"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>Obj</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3AObj"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>Object</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#t%3AObject"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>objectData</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AobjectData"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>objectHere</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AobjectHere"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>objectInArray</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AobjectInArray"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>objects</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aobjects"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>obj_desc</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aobj_desc"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>obj_longname</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aobj_longname"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>obj_name</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aobj_name"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>open</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Aopen"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>openedexits</TD
+><TD CLASS="indexlinks"
+>World</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>openedhall</TD
+><TD CLASS="indexlinks"
+>World</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>pour</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Apour"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>poured</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Apoured"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>process</TD
+><TD CLASS="indexlinks"
+><A HREF="Main.html#v%3Aprocess"
+>Main</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>processCommands</TD
+><TD CLASS="indexlinks"
+><A HREF="Main.html#v%3AprocessCommands"
+>Main</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>put</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Aput"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>quit</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3Aquit"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>readFile'</TD
+><TD CLASS="indexlinks"
+>Saveload</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>readRooms</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AreadRooms"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>removeInv</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AremoveInv"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>removeObject</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AremoveObject"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>repl</TD
+><TD CLASS="indexlinks"
+><A HREF="Main.html#v%3Arepl"
+>Main</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry" COLSPAN="2"
+>Room</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexannot"
+>1 (Type/Class)</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#t%3ARoom"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexannot"
+>2 (Data Constructor)</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3ARoom"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>room</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aroom"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>room_desc</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aroom_desc"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>save</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3Asave"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>saveHandler</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AsaveHandler"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>showRooms</TD
+><TD CLASS="indexlinks"
+><A HREF="Saveload.html#v%3AshowRooms"
+>Saveload</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>South</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3ASouth"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>street</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Astreet"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>updateRoom</TD
+><TD CLASS="indexlinks"
+><A HREF="Actions.html#v%3AupdateRoom"
+>Actions</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>West</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3AWest"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>winmessage</TD
+><TD CLASS="indexlinks"
+>Main</TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>won</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Awon"
+>World</A
+></TD
+></TR
+><TR CLASS="indexrow"
+><TD CLASS="indexentry"
+>world</TD
+><TD CLASS="indexlinks"
+><A HREF="World.html#v%3Aworld"
+>World</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></BODY
+></HTML
+>

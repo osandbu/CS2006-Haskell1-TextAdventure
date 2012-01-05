@@ -1,0 +1,1417 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+>World</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+><SCRIPT TYPE="text/javascript"
+>window.onload = function () {setSynopsis("mini_World.html")};</SCRIPT
+></HEAD
+><BODY
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="topbar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
+></TD
+><TD CLASS="title"
+></TD
+><TD CLASS="topbut"
+><A HREF="index.html"
+>Contents</A
+></TD
+><TD CLASS="topbut"
+><A HREF="doc-index.html"
+>Index</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="modulebar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><FONT SIZE="6"
+>World</FONT
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Description</TD
+></TR
+><TR
+><TD CLASS="doc"
+>World describes the different objects in the game world and their types.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Synopsis</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>type</SPAN
+> <A HREF="#t%3AAction"
+>Action</A
+> = String -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>type</SPAN
+> <A HREF="#t%3ACommand"
+>Command</A
+> = <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A HREF="#t%3AObject"
+>Object</A
+>  = <A HREF="#v%3AObj"
+>Obj</A
+> {<TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aobj_name"
+>obj_name</A
+> :: String</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aobj_longname"
+>obj_longname</A
+> :: String</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aobj_desc"
+>obj_desc</A
+> :: String</TD
+></TR
+></TABLE
+>}</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A HREF="#t%3AExit"
+>Exit</A
+>  = <A HREF="#v%3AExit"
+>Exit</A
+> {<TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aexit_dir"
+>exit_dir</A
+> :: <A HREF="World.html#t%3ADirection"
+>Direction</A
+></TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aexit_desc"
+>exit_desc</A
+> :: String</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aroom"
+>room</A
+> :: String</TD
+></TR
+></TABLE
+>}</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A HREF="#t%3ARoom"
+>Room</A
+>  = <A HREF="#v%3ARoom"
+>Room</A
+> {<TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aroom_desc"
+>room_desc</A
+> :: String</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aexits"
+>exits</A
+> :: [<A HREF="World.html#t%3AExit"
+>Exit</A
+>]</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aobjects"
+>objects</A
+> :: [<A HREF="World.html#t%3AObject"
+>Object</A
+>]</TD
+></TR
+></TABLE
+>}</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A HREF="#t%3AGameData"
+>GameData</A
+>  = <A HREF="#v%3AGameData"
+>GameData</A
+> {<TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Alocation_id"
+>location_id</A
+> :: String</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Aworld"
+>world</A
+> :: [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)]</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Ainventory"
+>inventory</A
+> :: [<A HREF="World.html#t%3AObject"
+>Object</A
+>]</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Apoured"
+>poured</A
+> :: Bool</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Acaffeinated"
+>caffeinated</A
+> :: Bool</TD
+></TR
+><TR
+><TD CLASS="recfield"
+><A HREF="#v%3Afinished"
+>finished</A
+> :: Bool</TD
+></TR
+></TABLE
+>}</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A HREF="#t%3ADirection"
+>Direction</A
+>  </TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+>= <A HREF="#v%3ANorth"
+>North</A
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+>| <A HREF="#v%3AWest"
+>West</A
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+>| <A HREF="#v%3ASouth"
+>South</A
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+>| <A HREF="#v%3AEast"
+>East</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Awon"
+>won</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Afullmug"
+>fullmug</A
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Acoffeepot"
+>coffeepot</A
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Amug"
+>mug</A
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Akitchen"
+>kitchen</A
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Ahall"
+>hall</A
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Astreet"
+>street</A
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Abedroom"
+>bedroom</A
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AinitState"
+>initState</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AgetRoomData"
+>getRoomData</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Documentation</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>type</SPAN
+> <A NAME="t:Action"
+><A NAME="t%3AAction"
+></A
+></A
+><B
+>Action</B
+> = String -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="World.html#t%3AAction"
+>Action</A
+></TT
+>s require an argument and tend to update the game state (examine does not)
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>type</SPAN
+> <A NAME="t:Command"
+><A NAME="t%3ACommand"
+></A
+></A
+><B
+>Command</B
+> = <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="World.html#t%3ACommand"
+>Command</A
+></TT
+>s do not require any arguments
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A NAME="t:Object"
+><A NAME="t%3AObject"
+></A
+></A
+><B
+>Object</B
+>  </TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="ndoc"
+><TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>s are objects in the game world, which can be picked up using the get function in Actions, and dropped using put from Actions
+</TD
+></TR
+><TR
+><TD CLASS="section4"
+>Constructors</TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="5" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:Obj"
+><A NAME="v%3AObj"
+></A
+></A
+><B
+>Obj</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="body" COLSPAN="2"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:obj_name"
+><A NAME="v%3Aobj_name"
+></A
+></A
+><B
+>obj_name</B
+> :: String</TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:obj_longname"
+><A NAME="v%3Aobj_longname"
+></A
+></A
+><B
+>obj_longname</B
+> :: String</TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:obj_desc"
+><A NAME="v%3Aobj_desc"
+></A
+></A
+><B
+>obj_desc</B
+> :: String</TD
+><TD CLASS="rdoc"
+></TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="section4"
+><IMG SRC="minus.gif" CLASS="coll" ONCLICK="toggle(this,'i:Object')" ALT="show/hide"
+> Instances</TD
+></TR
+><TR
+><TD CLASS="body"
+><DIV ID="i:Object" STYLE="display:block;"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+>Eq <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+>Read <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+>Show <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+></TABLE
+></DIV
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A NAME="t:Exit"
+><A NAME="t%3AExit"
+></A
+></A
+><B
+>Exit</B
+>  </TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="ndoc"
+>Data constructor for <TT
+><A HREF="World.html#t%3AExit"
+>Exit</A
+></TT
+>s.
+</TD
+></TR
+><TR
+><TD CLASS="section4"
+>Constructors</TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="5" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:Exit"
+><A NAME="v%3AExit"
+></A
+></A
+><B
+>Exit</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="body" COLSPAN="2"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:exit_dir"
+><A NAME="v%3Aexit_dir"
+></A
+></A
+><B
+>exit_dir</B
+> :: <A HREF="World.html#t%3ADirection"
+>Direction</A
+></TD
+><TD CLASS="rdoc"
+>The <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+> in which a player has to go to leave a <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> through this <TT
+><A HREF="World.html#t%3AExit"
+>Exit</A
+></TT
+>
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:exit_desc"
+><A NAME="v%3Aexit_desc"
+></A
+></A
+><B
+>exit_desc</B
+> :: String</TD
+><TD CLASS="rdoc"
+>A description of where this <TT
+><A HREF="World.html#t%3AExit"
+>Exit</A
+></TT
+> leads
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:room"
+><A NAME="v%3Aroom"
+></A
+></A
+><B
+>room</B
+> :: String</TD
+><TD CLASS="rdoc"
+>A single word identifier of the <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> the exit leads to.
+</TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="section4"
+><IMG SRC="minus.gif" CLASS="coll" ONCLICK="toggle(this,'i:Exit')" ALT="show/hide"
+> Instances</TD
+></TR
+><TR
+><TD CLASS="body"
+><DIV ID="i:Exit" STYLE="display:block;"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+>Eq <A HREF="World.html#t%3AExit"
+>Exit</A
+></TD
+></TR
+></TABLE
+></DIV
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A NAME="t:Room"
+><A NAME="t%3ARoom"
+></A
+></A
+><B
+>Room</B
+>  </TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="ndoc"
+>Data constructor for <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>s.
+</TD
+></TR
+><TR
+><TD CLASS="section4"
+>Constructors</TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="5" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:Room"
+><A NAME="v%3ARoom"
+></A
+></A
+><B
+>Room</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="body" COLSPAN="2"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:room_desc"
+><A NAME="v%3Aroom_desc"
+></A
+></A
+><B
+>room_desc</B
+> :: String</TD
+><TD CLASS="rdoc"
+>A description of the <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:exits"
+><A NAME="v%3Aexits"
+></A
+></A
+><B
+>exits</B
+> :: [<A HREF="World.html#t%3AExit"
+>Exit</A
+>]</TD
+><TD CLASS="rdoc"
+>The <TT
+><A HREF="World.html#t%3AExit"
+>Exit</A
+></TT
+>s leading from this <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:objects"
+><A NAME="v%3Aobjects"
+></A
+></A
+><B
+>objects</B
+> :: [<A HREF="World.html#t%3AObject"
+>Object</A
+>]</TD
+><TD CLASS="rdoc"
+>The <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>s contained in this <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>
+</TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="section4"
+><IMG SRC="minus.gif" CLASS="coll" ONCLICK="toggle(this,'i:Room')" ALT="show/hide"
+> Instances</TD
+></TR
+><TR
+><TD CLASS="body"
+><DIV ID="i:Room" STYLE="display:block;"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+>Eq <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+>Show <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+></TABLE
+></DIV
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A NAME="t:GameData"
+><A NAME="t%3AGameData"
+></A
+></A
+><B
+>GameData</B
+>  </TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="ndoc"
+>Data constructor for <TT
+><A HREF="World.html#t%3AGameData"
+>GameData</A
+></TT
+>, i.e. the game state.
+</TD
+></TR
+><TR
+><TD CLASS="section4"
+>Constructors</TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="5" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:GameData"
+><A NAME="v%3AGameData"
+></A
+></A
+><B
+>GameData</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="body" COLSPAN="2"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:location_id"
+><A NAME="v%3Alocation_id"
+></A
+></A
+><B
+>location_id</B
+> :: String</TD
+><TD CLASS="rdoc"
+>the <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> identifier of the location where the player currently is.
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:world"
+><A NAME="v%3Aworld"
+></A
+></A
+><B
+>world</B
+> :: [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)]</TD
+><TD CLASS="rdoc"
+>Tuple containing <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> identifiers and <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> descriptions.
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:inventory"
+><A NAME="v%3Ainventory"
+></A
+></A
+><B
+>inventory</B
+> :: [<A HREF="World.html#t%3AObject"
+>Object</A
+>]</TD
+><TD CLASS="rdoc"
+><TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>s the player is carrying.
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:poured"
+><A NAME="v%3Apoured"
+></A
+></A
+><B
+>poured</B
+> :: Bool</TD
+><TD CLASS="rdoc"
+>Whether coffee has been poured.
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:caffeinated"
+><A NAME="v%3Acaffeinated"
+></A
+></A
+><B
+>caffeinated</B
+> :: Bool</TD
+><TD CLASS="rdoc"
+>Whether coffee has been drunk.
+</TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:finished"
+><A NAME="v%3Afinished"
+></A
+></A
+><B
+>finished</B
+> :: Bool</TD
+><TD CLASS="rdoc"
+>Set to True at the end.
+</TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="section4"
+><IMG SRC="minus.gif" CLASS="coll" ONCLICK="toggle(this,'i:GameData')" ALT="show/hide"
+> Instances</TD
+></TR
+><TR
+><TD CLASS="body"
+><DIV ID="i:GameData" STYLE="display:block;"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+>Show <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+></TABLE
+></DIV
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A NAME="t:Direction"
+><A NAME="t%3ADirection"
+></A
+></A
+><B
+>Direction</B
+>  </TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="ndoc"
+>Data constructors for <TT
+><A HREF="World.html#t%3ADirection"
+>Direction</A
+></TT
+>s.
+</TD
+></TR
+><TR
+><TD CLASS="section4"
+>Constructors</TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="arg"
+><A NAME="v:North"
+><A NAME="v%3ANorth"
+></A
+></A
+><B
+>North</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:West"
+><A NAME="v%3AWest"
+></A
+></A
+><B
+>West</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:South"
+><A NAME="v%3ASouth"
+></A
+></A
+><B
+>South</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+><TR
+><TD CLASS="arg"
+><A NAME="v:East"
+><A NAME="v%3AEast"
+></A
+></A
+><B
+>East</B
+></TD
+><TD CLASS="rdoc"
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="section4"
+><IMG SRC="minus.gif" CLASS="coll" ONCLICK="toggle(this,'i:Direction')" ALT="show/hide"
+> Instances</TD
+></TR
+><TR
+><TD CLASS="body"
+><DIV ID="i:Direction" STYLE="display:block;"
+><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+>Eq <A HREF="World.html#t%3ADirection"
+>Direction</A
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+>Show <A HREF="World.html#t%3ADirection"
+>Direction</A
+></TD
+></TR
+></TABLE
+></DIV
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:won"
+><A NAME="v%3Awon"
+></A
+></A
+><B
+>won</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; Bool</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Returns true if the player has won.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:fullmug"
+><A NAME="v%3Afullmug"
+></A
+></A
+><B
+>fullmug</B
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>mug, fullmug and coffeepot are all <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>s in the gameworld.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:coffeepot"
+><A NAME="v%3Acoffeepot"
+></A
+></A
+><B
+>coffeepot</B
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:mug"
+><A NAME="v%3Amug"
+></A
+></A
+><B
+>mug</B
+> :: <A HREF="World.html#t%3AObject"
+>Object</A
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:kitchen"
+><A NAME="v%3Akitchen"
+></A
+></A
+><B
+>kitchen</B
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:hall"
+><A NAME="v%3Ahall"
+></A
+></A
+><B
+>hall</B
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:street"
+><A NAME="v%3Astreet"
+></A
+></A
+><B
+>street</B
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:bedroom"
+><A NAME="v%3Abedroom"
+></A
+></A
+><B
+>bedroom</B
+> :: <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:initState"
+><A NAME="v%3AinitState"
+></A
+></A
+><B
+>initState</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="World.html#v%3AinitState"
+>initState</A
+></TT
+> function initializes the starting state of the game. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:getRoomData"
+><A NAME="v%3AgetRoomData"
+></A
+></A
+><B
+>getRoomData</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="World.html#v%3AgetRoomData"
+>getRoomData</A
+></TT
+> function returns the room the player is currently in. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="botbar"
+>Produced by <A HREF="http://www.haskell.org/haddock/"
+>Haddock</A
+> version 2.6.1</TD
+></TR
+></TABLE
+></BODY
+></HTML
+>

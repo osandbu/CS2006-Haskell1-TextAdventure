@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+>Main</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+><SCRIPT TYPE="text/javascript"
+>window.onload = function () {setSynopsis("mini_Main.html")};</SCRIPT
+></HEAD
+><BODY
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="topbar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
+></TD
+><TD CLASS="title"
+></TD
+><TD CLASS="topbut"
+><A HREF="index.html"
+>Contents</A
+></TD
+><TD CLASS="topbut"
+><A HREF="doc-index.html"
+>Index</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="modulebar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><FONT SIZE="6"
+>Main</FONT
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Synopsis</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AprocessCommands"
+>processCommands</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aprocess"
+>process</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; [String] -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Arepl"
+>repl</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; IO <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Amain"
+>main</A
+> :: IO ()</TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Documentation</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:processCommands"
+><A NAME="v%3AprocessCommands"
+></A
+></A
+><B
+>processCommands</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="Main.html#v%3AprocessCommands"
+>processCommands</A
+></TT
+> function takes a game state and a <TT
+>String</TT
+>
+	of commands as arguments, splits the given string around <A HREF=" then .html"
+> then </A
+> 
+	and processes one command at the time.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:process"
+><A NAME="v%3Aprocess"
+></A
+></A
+><B
+>process</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; [String] -&gt; (<A HREF="World.html#t%3AGameData"
+>GameData</A
+>, String)</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Given a game state, and user input (as a list of words) return a 
+   new game state and a message for the user. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:repl"
+><A NAME="v%3Arepl"
+></A
+></A
+><B
+>repl</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; IO <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+><TT
+><A HREF="Main.html#v%3Arepl"
+>repl</A
+></TT
+> is the game loop, which takes in commands from the user and
+	processes them. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:main"
+><A NAME="v%3Amain"
+></A
+></A
+><B
+>main</B
+> :: IO ()</TD
+></TR
+><TR
+><TD CLASS="doc"
+>main method required for the 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="botbar"
+>Produced by <A HREF="http://www.haskell.org/haddock/"
+>Haddock</A
+> version 2.6.1</TD
+></TR
+></TABLE
+></BODY
+></HTML
+>

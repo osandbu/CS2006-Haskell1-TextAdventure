@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+>Saveload</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+></HEAD
+><BODY
+><DIV CLASS="outer"
+><DIV CLASS="mini-topbar"
+>Saveload</DIV
+><DIV CLASS="mini-synopsis"
+><DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AsaveHandler" TARGET="main"
+>saveHandler</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AloadHandler" TARGET="main"
+>loadHandler</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AfindRoom" TARGET="main"
+>findRoom</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AshowRooms" TARGET="main"
+>showRooms</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AreadRooms" TARGET="main"
+>readRooms</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AbuildRooms" TARGET="main"
+>buildRooms</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AbuildGameWorld" TARGET="main"
+>buildGameWorld</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3AbuildGameData" TARGET="main"
+>buildGameData</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3Asave" TARGET="main"
+>save</A
+></DIV
+> <DIV CLASS="decl"
+><A HREF="Saveload.html#v%3Aload" TARGET="main"
+>load</A
+></DIV
+></DIV
+></DIV
+></BODY
+></HTML
+>

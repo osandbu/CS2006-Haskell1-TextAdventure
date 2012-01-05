@@ -1,0 +1,464 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+>Saveload</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+><SCRIPT TYPE="text/javascript"
+>window.onload = function () {setSynopsis("mini_Saveload.html")};</SCRIPT
+></HEAD
+><BODY
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="topbar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
+></TD
+><TD CLASS="title"
+></TD
+><TD CLASS="topbut"
+><A HREF="index.html"
+>Contents</A
+></TD
+><TD CLASS="topbut"
+><A HREF="doc-index.html"
+>Index</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="modulebar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><FONT SIZE="6"
+>Saveload</FONT
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Description</TD
+></TR
+><TR
+><TD CLASS="doc"
+>SaveLoad contains functions that are only relevant to saving and loading. These were originally in
+Actions.hs, but it was felt that there was enough disparity in the intent of the code for it to warrant its
+own module 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Synopsis</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AsaveHandler"
+>saveHandler</A
+> :: IOError -&gt; IO ()</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AloadHandler"
+>loadHandler</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; IOError -&gt; IO <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AfindRoom"
+>findRoom</A
+> :: String -&gt; [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)] -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AshowRooms"
+>showRooms</A
+> :: [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)] -&gt; String</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AreadRooms"
+>readRooms</A
+> :: [String] -&gt; [(String, [String])]</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AbuildRooms"
+>buildRooms</A
+> :: [(String, [String])] -&gt; [(String, [<A HREF="World.html#t%3AObject"
+>Object</A
+>])]</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AbuildGameWorld"
+>buildGameWorld</A
+> :: [(String, [<A HREF="World.html#t%3AObject"
+>Object</A
+>])] -&gt; [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)]</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AbuildGameData"
+>buildGameData</A
+> :: [String] -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Asave"
+>save</A
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; IO ()</TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Aload"
+>load</A
+> :: String -&gt; IO <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Documentation</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:saveHandler"
+><A NAME="v%3AsaveHandler"
+></A
+></A
+><B
+>saveHandler</B
+> :: IOError -&gt; IO ()</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Error handler to catch save IO exceptions. The game should still be able
+to be played, even if the saved game file can't be written. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:loadHandler"
+><A NAME="v%3AloadHandler"
+></A
+></A
+><B
+>loadHandler</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; IOError -&gt; IO <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Error handler to catch load IO exceptions. The game should still be able
+to be played, even if the saved game file can't be saved. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:findRoom"
+><A NAME="v%3AfindRoom"
+></A
+></A
+><B
+>findRoom</B
+> :: String -&gt; [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)] -&gt; <A HREF="World.html#t%3ARoom"
+>Room</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="Saveload.html#v%3AfindRoom"
+>findRoom</A
+></TT
+> function takes two arguments: a room id and a list of tuples of room names and rooms and returns the corresponding <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+> description. Assumes that a room with the given room ID exists in the list of tuples. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:showRooms"
+><A NAME="v%3AshowRooms"
+></A
+></A
+><B
+>showRooms</B
+> :: [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)] -&gt; String</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Serialise the <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>s in a gameworld (list of <TT
+><A HREF="World.html#t%3ARoom"
+>Room</A
+></TT
+>s). 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:readRooms"
+><A NAME="v%3AreadRooms"
+></A
+></A
+><B
+>readRooms</B
+> :: [String] -&gt; [(String, [String])]</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Unserialise a list of alternating room names and a list of objects names in that room. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:buildRooms"
+><A NAME="v%3AbuildRooms"
+></A
+></A
+><B
+>buildRooms</B
+> :: [(String, [String])] -&gt; [(String, [<A HREF="World.html#t%3AObject"
+>Object</A
+>])]</TD
+></TR
+><TR
+><TD CLASS="doc"
+>Build a list of <TT
+><A HREF="World.html#t%3AObject"
+>Object</A
+></TT
+>s for each room from a list of object names 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:buildGameWorld"
+><A NAME="v%3AbuildGameWorld"
+></A
+></A
+><B
+>buildGameWorld</B
+> :: [(String, [<A HREF="World.html#t%3AObject"
+>Object</A
+>])] -&gt; [(String, <A HREF="World.html#t%3ARoom"
+>Room</A
+>)]</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:buildGameData"
+><A NAME="v%3AbuildGameData"
+></A
+></A
+><B
+>buildGameData</B
+> :: [String] -&gt; <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Build a <TT
+><A HREF="World.html#t%3AGameData"
+>GameData</A
+></TT
+> state from a list of <TT
+>String</TT
+>s. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:save"
+><A NAME="v%3Asave"
+></A
+></A
+><B
+>save</B
+> :: <A HREF="World.html#t%3AGameData"
+>GameData</A
+> -&gt; String -&gt; IO ()</TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="Saveload.html#v%3Asave"
+>save</A
+></TT
+> function saves the current game. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A NAME="v:load"
+><A NAME="v%3Aload"
+></A
+></A
+><B
+>load</B
+> :: String -&gt; IO <A HREF="World.html#t%3AGameData"
+>GameData</A
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>The <TT
+><A HREF="Saveload.html#v%3Aload"
+>load</A
+></TT
+> function loads a previously saved game. 
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="botbar"
+>Produced by <A HREF="http://www.haskell.org/haddock/"
+>Haddock</A
+> version 2.6.1</TD
+></TR
+></TABLE
+></BODY
+></HTML
+>

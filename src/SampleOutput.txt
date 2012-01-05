@@ -1,0 +1,63 @@
+Prelude> :load Adventure.hs
+[1 of 3] Compiling World            ( World.hs, interpreted )
+[2 of 3] Compiling Actions          ( Actions.hs, interpreted )
+[3 of 3] Compiling Main             ( Adventure.hs, interpreted )
+Ok, modules loaded: Main, Actions, World.
+*Main> main
+Loading package haskell98 ... linking ... done.
+You are in your bedroom.
+To the north is a kitchen.
+
+You can see: a coffee mug
+What now? get mug
+You pick up mug.
+You are in your bedroom.
+To the north is a kitchen.
+What now? go north
+You go to the kitchen.
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+
+You can see: a pot of coffee
+What now? get coffee
+You pick up coffee.
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+What now? pour coffee
+You pour some coffee
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+What now? go west
+You go to the hall.
+You are in the hallway. The front door is closed.
+To the east is a kitchen.
+What now? open door
+It's too heavy!
+You are in the hallway. The front door is closed.
+To the east is a kitchen.
+What now? inventory
+You are carrying:
+a full coffee mug
+You are in the hallway. The front door is closed.
+To the east is a kitchen.
+What now? drink coffee
+You drink the coffee.
+You are in the hallway. The front door is closed.
+To the east is a kitchen.
+What now? inv
+I don't understand
+You are in the hallway. The front door is closed.
+To the east is a kitchen.
+What now? inventory
+You are carrying:
+a full coffee mug
+You are in the hallway. The front door is closed.
+To the east is a kitchen.
+What now? open door
+You open the door.
+You are in the hallway. The front door is open.
+To the east is a kitchen. You can go outside.
+What now? go out
+You go to the street.
+Congratulations, you have made it out of the house.
+Now go to your lectures...

@@ -1,0 +1,25 @@
+What now? inventory
+You are carrying:
+a pot of coffee
+a coffee mug
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+What now? pour coffee
+You pour some coffee
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+What now? inventory
+You are carrying:
+a full coffee mug
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+What now? drink coffee
+You drink the coffee.
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+What now? inventory
+You are carrying:
+a full coffee mug
+You are in the kitchen.
+To the south is your bedroom. To the west is a hallway.
+What now?
